@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>Mocha</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="support/mocha.css" /> 
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>   
+    <script src="support/mocha.js"></script>
+    <script src="support/chai.js"></script>
+    <script src="support/handlebars.js"></script>
+    <script>
+      chai.should();
+      mocha.setup('bdd');
+      $(function () {
+        mocha
+        .run()
+        .globals(['Application'])
+      })
+    </script>
+    <script src="lib/app.js"></script>
+    <script src="spec/app.spec.js"></script>
+  </head>
+  <body>
+     <script id="test-template" type="text/x-handlebars-template"><p>{{name}}</p></script>
+    <div id="mocha"></div>
+  </body>
+</html>
